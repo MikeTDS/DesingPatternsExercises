@@ -48,7 +48,7 @@ public class ReportBuilderTest {
 		// Save the references
 		List<ReportBuilder> references = Collections.synchronizedList(new ArrayList<ReportBuilder>());
 		// Create n treads
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < 3; i++) { //bylo i<10
 			Thread worker = new Thread(new Worker(i, references));
 			threads.add(worker);
 			worker.start();
