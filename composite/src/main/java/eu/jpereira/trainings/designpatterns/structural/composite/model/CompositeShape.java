@@ -70,7 +70,10 @@ public abstract class CompositeShape extends Shape {
 	 *             if this shape is not a composite
 	 */
 	public void addShape(Shape shape) throws ShapeDoesNotSupportChildren{
-		shapes.add(shape);
+		try {
+			shapes.add(shape);
+		}
+		catch(Exception ex) {}
 	}
 
 	public List<Shape> getShapes() {
@@ -97,7 +100,13 @@ public abstract class CompositeShape extends Shape {
 	 * @return
 	 */
 	public List<Shape> getLeafShapes() {
-		return shapes;
+		List<Shape> leafShapes = new ArrayList<Shape>();
+		for(Shape shape : leafShapes) {
+			if(shape instanceof LeafShape) {
+				leafShapes.add(shape);
+			}
+		}
+		return leafShapes;
 	}
 
 	/**
