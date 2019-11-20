@@ -23,7 +23,6 @@ public class DefaultBookStoreFacade implements BookstoreFacade{
 		Order theOrder = orderingService.createOrder(theClient, orderedBook);
 		DispatchReceipt dr = warehouseService.dispatch(theOrder);
 		customerNotificationService.notifyClient(dr);
-		
 	}
 	
 	

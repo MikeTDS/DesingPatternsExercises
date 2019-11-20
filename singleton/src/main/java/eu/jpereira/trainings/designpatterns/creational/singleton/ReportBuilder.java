@@ -44,11 +44,11 @@ public class ReportBuilder {
 
 		configuredSites = new ArrayList<String>();
 		configuredSites.add("http://www.wikipedia.com");
-		configuredSites.add("http://jpereira.eu");
+		//configuredSites.add("http://jpereira.eu");
 		configuredSites.add("http://stackoverflow.com");
 	}
 
-	private ReportBuilder() { //bylo public
+	private ReportBuilder() {
 		initiatlize();
 	}
 

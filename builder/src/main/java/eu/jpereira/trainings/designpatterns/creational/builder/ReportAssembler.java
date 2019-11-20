@@ -41,7 +41,7 @@ public class ReportAssembler {
 	public Report getReport(){
 		Report report = new Report();
 		reportBodyBuilder.setSaleEntry(saleEntry);
-		reportBodyBuilder.buildReportBody();
+		//reportBodyBuilder.buildReportBody();
 		report.setReportBody(reportBodyBuilder.getReportBody());
 		return report;
 	}

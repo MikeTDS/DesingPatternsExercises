@@ -61,14 +61,6 @@ public abstract class CompositeShape extends Shape {
 
 	}
 
-	/**
-	 * Add a shape to this shape.
-	 * 
-	 * @param shape
-	 *            The shape to add
-	 * @throws ShapeDoesNotSupportChildren
-	 *             if this shape is not a composite
-	 */
 	public void addShape(Shape shape) throws ShapeDoesNotSupportChildren{
 		try {
 			shapes.add(shape);
